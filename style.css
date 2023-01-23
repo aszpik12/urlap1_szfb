@@ -1,0 +1,58 @@
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "a n"
+    "f f";
+}
+
+.box{
+    background-color: bisque;
+}
+
+header{
+    grid-area: h;
+}
+
+article{
+    grid-area: a;
+}
+
+nav{
+    grid-area: n;
+}
+
+footer{
+    grid-area: f;
+}
+
+@media all and (max-width: 1000px){
+    main{
+    grid-template-columns: 2fr 1fr;
+    }
+
+    .box{
+        background-color: aquamarine;
+    }
+}  
+
+@media all and (max-width: 600px){
+    main{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "n"
+    "a"
+    "f";
+    }
+
+    .box{
+        background-color: blueviolet;
+    }
+}  
