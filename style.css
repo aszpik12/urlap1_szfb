@@ -3,6 +3,8 @@ body{
 }
 
 main{
+    width: 70%;
+    margin: 0 auto;
     display: grid;
     gap: 10px;
     grid-template-columns: 4fr 1fr;
@@ -12,16 +14,25 @@ main{
     "f f";
 }
 
+header, article, footer, nav{
+    background-color: azure;
+    padding: 1em;
+}
+
 .box{
     background-color: bisque;
 }
 
 header{
     grid-area: h;
+    text-align: center;
+    background-image: url(kepek/Tech-Priest.jpg);
+    background-size: cover;
 }
 
 article{
     grid-area: a;
+    height: 50vh;
 }
 
 nav{
@@ -30,9 +41,55 @@ nav{
 
 footer{
     grid-area: f;
+    text-align: center;
 }
 
-@media all and (max-width: 1000px){
+input[type=submit]{
+    transition-duration: 0.4s;
+    margin-left: 20px;
+    background-color: rgb(88, 23, 23);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    left: 38%;
+}
+
+input[type=submit]:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+fieldset{
+    border: rgb(88, 23, 23) 2px solid;
+    margin: 15px;
+    padding: 15px;
+}
+
+legend{
+    text-align: right;
+    background-color: antiquewhite;
+    color: rgb(88, 23, 23);
+    border-radius: 5px;
+    padding: 2px 30px;
+}
+
+label{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+
+input, label{
+    margin-top: 20px;
+}
+
+
+@media all and (max-width: 1200px){
     main{
     grid-template-columns: 2fr 1fr;
     }
@@ -44,6 +101,7 @@ footer{
 
 @media all and (max-width: 600px){
     main{
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "h"

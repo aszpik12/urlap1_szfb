@@ -14,10 +14,20 @@
         </header>
             <article class="box">
                 <form action="#" method="get">
-                    <label for="vNev">Vezetéknév:</label>
-                    <input type="text" name="vezetekNev" id="vNev">
-                    <label for="kNev">Kerestnév:</label>
-                    <input type="text" name="keresztNev" id="kNev">
+                    <fieldset>
+                        <legend>Adatok</legend>
+                        <label for="vNev">Vezetéknév:</label>
+                        <input type="text" name="vezetekNev" id="vNev"><br>
+                        <label for="kNev">Kerestnév:</label>
+                        <input type="text" name="keresztNev" id="kNev"><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Adatok</legend>
+                        <label for="Email">Email:</label>
+                        <input type="email" name="email" id="email"><br>
+                        <label for="">Mai dátum</label>
+                        <input type="date" name="date" id="date"><br>
+                    </fieldset>
                     <input type="submit" value="küldes">
                 </form>
             </article>
